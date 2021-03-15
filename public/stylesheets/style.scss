@@ -1,0 +1,30 @@
+body {
+  background-color: #fff;
+  background-size: 100% 1.2em;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+.custom-control-label {
+  &::before,
+  &::after {
+    top: 0.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  font-size: larger;
+}
