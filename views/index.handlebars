@@ -1,0 +1,68 @@
+<div class=' container-fluid p-4 '>
+    <!-- 標題 -->
+    <div class="d-flex justify-content-center  mb-4">
+        <h1>
+            你想對誰說幹話？
+        </h1>
+    </div>
+
+    <!--表單-->
+    <form method="POST" action="/" class="px-2">
+        <!--選項-->
+        <div class="row row-cols-1 row-cols-md-3 mb-5">
+            <div class="col mb-4">
+                <div class="card border-dark border">
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="custom-control custom-radio form-control-lg d-flex justify-content-center">
+                            <input type="radio" id="engineer" name="customRadio" value="engineer"
+                                class="custom-control-input" {{#if_radioOn target 'engineer' }} checked{{/if_radioOn}}>
+                            <label class="custom-control-label " for="engineer">工程師</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class='card border-dark border'>
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                        alt="" class="card-img-top">
+                    <div class='card-body'>
+                        <div class="custom-control custom-radio form-control-lg d-flex justify-content-center">
+                            <input type="radio" id="designer" name="customRadio" value="designer"
+                                class="custom-control-input" {{#if_radioOn target 'designer' }} checked{{/if_radioOn}}>
+                            <label class="custom-control-label" for="designer">設計師</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class='card border-dark border'>
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                        alt="" class="card-img-top">
+                    <div class='card-body'>
+                        <div class="custom-control custom-radio  form-control-lg d-flex justify-content-center">
+                            <input type="radio" id="entrepreneur" name="customRadio" value="entrepreneur"
+                                class="custom-control-input" {{#if_radioOn target 'entrepreneur' }}
+                                checked{{/if_radioOn}}>
+                            <label class="custom-control-label" for="entrepreneur">創業家</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--結果-->
+        <div class='row py-5 px-3 '>
+            <div class="col-2">
+                <button class="btn btn-warning btn-lg btn-block" type="submit">產生幹話</button>
+            </div>
+
+            <div class="col-10 alert alert-success text-dark text-center">
+                {{{trashTalkResult}}}
+            </div>
+        </div>
+    </form>
+</div>
